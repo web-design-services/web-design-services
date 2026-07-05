@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://8080-ih7s0zw8n5qwjdgi928qs-b8b4d66a.sg1.manus.computer/ -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プレミアムプラン お申し込み | ウェブ制作サービス</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./スタンダードプラン_files/css2" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --orange: #F97316;
+      --orange-light: #FED7AA;
+      --orange-bg: #FFF7ED;
+      --blue: #3B82F6;
+      --blue-light: #BFDBFE;
+      --blue-bg: #EFF6FF;
+      --dark: #1E293B;
+      --gray: #64748B;
+      --gray-light: #F1F5F9;
+      --border: #E2E8F0;
+      --white: #FFFFFF;
+      --green: #22C55E;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: #F8FAFC;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+    }
+
+    .header-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+
+    .header-logo-icon {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, var(--orange), #FB923C);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header-logo-icon svg {
+      width: 18px;
+      height: 18px;
+      fill: white;
+    }
+
+    .header-logo-text {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .header-sep {
+      color: var(--border);
+      font-size: 20px;
+      margin: 0 4px;
+    }
+
+    .header-plan-label {
+      font-size: 14px;
+      color: var(--gray);
+      font-weight: 500;
+    }
+
+    /* ===== HERO BANNER ===== */
+    .hero {
+      background: linear-gradient(135deg, #FFF7ED 0%, #EFF6FF 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--orange-bg);
+      border: 1px solid var(--orange-light);
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .hero h1 span {
+      color: var(--orange);
+    }
+
+    .hero p {
+      font-size: 16px;
+      color: var(--gray);
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* ===== MAIN LAYOUT ===== */
+    .main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 32px;
+      align-items: start;
+    }
+
+    @media (max-width: 768px) {
+      .main {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ===== PLAN SUMMARY CARD ===== */
+    .plan-card {
+      background: var(--white);
+      border: 2px solid var(--blue-light);
+      border-radius: 16px;
+      padding: 28px;
+      position: sticky;
+      top: 80px;
+    }
+
+    .plan-card-header {
+      margin-bottom: 20px;
+    }
+
+    .plan-card-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+
+    .plan-card-subtitle {
+      font-size: 13px;
+      color: var(--gray);
+    }
+
+    .plan-price {
+      margin: 16px 0;
+      padding: 16px;
+      background: var(--blue-bg);
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .plan-price-label {
+      font-size: 12px;
+      color: var(--gray);
+      margin-bottom: 4px;
+    }
+
+    .plan-price-amount {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--blue);
+    }
+
+    .plan-price-amount span {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--gray);
+    }
+
+    .plan-features {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .plan-features li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 0;
+      font-size: 14px;
+      color: var(--dark);
+      border-bottom: 1px solid var(--gray-light);
+    }
+
+    .plan-features li:last-child {
+      border-bottom: none;
+    }
+
+    .check-icon {
+      width: 20px;
+      height: 20px;
+      background: var(--green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .check-icon svg {
+      width: 12px;
+      height: 12px;
+      stroke: white;
+      fill: none;
+    }
+
+    .plan-note {
+      font-size: 12px;
+      color: var(--gray);
+      background: var(--gray-light);
+      border-radius: 8px;
+      padding: 10px 12px;
+      line-height: 1.6;
+    }
+
+    /* ===== FORM SECTION ===== */
+    .form-section {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+    }
+
+    .form-section-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+
+    .form-section-desc {
+      font-size: 14px;
+      color: var(--gray);
+      margin-bottom: 28px;
+    }
+
+    .step-indicator {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin-bottom: 32px;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .step-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .step.active .step-num {
+      background: var(--orange);
+      color: white;
+    }
+
+    .step.done .step-num {
+      background: var(--green);
+      color: white;
+    }
+
+    .step.inactive .step-num {
+      background: var(--border);
+      color: var(--gray);
+    }
+
+    .step-label {
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .step.active .step-label { color: var(--orange); }
+    .step.done .step-label { color: var(--green); }
+    .step.inactive .step-label { color: var(--gray); }
+
+    .step-line {
+      flex: 1;
+      height: 2px;
+      background: var(--border);
+      margin: 0 4px;
+    }
+
+    /* FORM FIELDS */
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+
+    .form-label .required {
+      color: var(--orange);
+      margin-left: 4px;
+      font-size: 12px;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      font-size: 15px;
+      font-family: 'Noto Sans JP', sans-serif;
+      color: var(--dark);
+      background: var(--white);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(59,130,246,0.12);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      padding-right: 36px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 500px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .form-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 28px 0;
+    }
+
+    .form-section-subtitle {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .form-section-subtitle::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 16px;
+      background: var(--orange);
+      border-radius: 2px;
+    }
+
+    /* CHECKBOX */
+    .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      cursor: pointer;
+      font-size: 14px;
+      color: var(--dark);
+    }
+
+    .checkbox-label input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--orange);
+      flex-shrink: 0;
+      margin-top: 2px;
+      cursor: pointer;
+    }
+
+    /* AGREE */
+    .agree-box {
+      background: var(--gray-light);
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 24px;
+    }
+
+    .agree-box p {
+      font-size: 13px;
+      color: var(--gray);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .agree-box a {
+      color: var(--blue);
+      text-decoration: underline;
+    }
+
+    .agree-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    .agree-label input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--orange);
+      cursor: pointer;
+    }
+
+    /* SUBMIT BUTTON */
+    .submit-btn {
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, var(--orange), #FB923C);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 17px;
+      font-weight: 700;
+      font-family: 'Noto Sans JP', sans-serif;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s, opacity 0.2s;
+      box-shadow: 0 4px 16px rgba(249,115,22,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(249,115,22,0.45);
+    }
+
+    .submit-btn:active {
+      transform: translateY(0);
+    }
+
+    .submit-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .submit-btn svg {
+      width: 20px;
+      height: 20px;
+      stroke: white;
+      fill: none;
+    }
+
+    .submit-note {
+      text-align: center;
+      font-size: 12px;
+      color: var(--gray);
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .submit-note svg {
+      width: 14px;
+      height: 14px;
+      stroke: var(--gray);
+      fill: none;
+    }
+
+    /* ===== SUCCESS STATE ===== */
+    .success-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .success-overlay.show {
+      display: flex;
+    }
+
+    .success-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 48px 40px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      animation: popIn 0.35s cubic-bezier(0.34,1.56,0.64,1);
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .success-icon {
+      width: 72px;
+      height: 72px;
+      background: linear-gradient(135deg, var(--green), #16A34A);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+    }
+
+    .success-icon svg {
+      width: 36px;
+      height: 36px;
+      stroke: white;
+      fill: none;
+      stroke-width: 2.5;
+    }
+
+    .success-card h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+
+    .success-card p {
+      font-size: 15px;
+      color: var(--gray);
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .success-back-btn {
+      display: inline-block;
+      padding: 12px 32px;
+      background: var(--gray-light);
+      color: var(--dark);
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .success-back-btn:hover {
+      background: var(--border);
+    }
+
+    /* ===== FAQ ===== */
+    .faq-section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+    }
+
+    .faq-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      cursor: pointer;
+      text-align: left;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--dark);
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    .faq-question:hover {
+      background: var(--gray-light);
+    }
+
+    .faq-question svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--gray);
+      fill: none;
+      flex-shrink: 0;
+      transition: transform 0.25s;
+    }
+
+    .faq-item.open .faq-question svg {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+    }
+
+    .faq-answer-inner {
+      padding: 0 20px 16px;
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--dark);
+      color: #94A3B8;
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: #94A3B8;
+      text-decoration: underline;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .plan-card {
+        position: static;
+        order: -1;
+      }
+
+      .form-section {
+        padding: 24px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="https://8080-ih7s0zw8n5qwjdgi928qs-b8b4d66a.sg1.manus.computer/#" class="header-logo">
+        <div class="header-logo-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+        </div>
+        <span class="header-logo-text">ウェブ制作サービス</span>
+      </a>
+      <span class="header-sep">/</span>
+      <span class="header-plan-label">プレミアムプラン お申し込み</span>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      プレミアムプラン
+    </div>
+    <h1>お申し込みフォーム<br><span>¥250,000〜</span> でウェブサイトを制作</h1>
+    <p>フォームにご記入いただくと、担当者より2営業日以内にご連絡いたします。</p>
+  </section>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- FORM SECTION -->
+    <section class="form-section">
+      <h2 class="form-section-title">お申し込みフォーム</h2>
+      <p class="form-section-desc">以下の項目をご記入の上、送信してください。</p>
+
+      <!-- STEP INDICATOR -->
+      <div class="step-indicator">
+        <div class="step active">
+          <div class="step-num">1</div>
+          <span class="step-label">情報入力</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step inactive">
+          <div class="step-num">2</div>
+          <span class="step-label">確認・送信</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step inactive">
+          <div class="step-num">3</div>
+          <span class="step-label">完了</span>
+        </div>
+      </div>
+
+      <form id="applyForm" action="https://formspree.io/f/xgojyzrl" method="POST" novalidate="">
+
+        <!-- 基本情報 -->
+        <p class="form-section-subtitle">基本情報</p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="lastName">姓<span class="required">必須</span></label>
+            <input class="form-input" type="text" id="lastName" name="プレミアムプランlastName" placeholder="山田" required="">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="firstName">名<span class="required">必須</span></label>
+            <input class="form-input" type="text" id="firstName" name="firstName" placeholder="太郎" required="">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="company">会社名・屋号</label>
+          <input class="form-input" type="text" id="company" name="会社名・屋号" placeholder="株式会社〇〇 / 個人の場合は空欄可">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email">メールアドレス<span class="required">必須</span></label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="your@example.com" required="">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="phone">電話番号<span class="required">必須</span></label>
+          <input class="form-input" type="tel" id="phone" name="電話番号" placeholder="090-0000-0000" required="">
+        </div>
+
+        <hr class="form-divider">
+
+        <!-- ウェブサイト詳細 -->
+        <p class="form-section-subtitle">ウェブサイトについて</p>
+
+        <div class="form-group">
+          <label class="form-label" for="業種">業種<span class="required">必須</span></label>
+          <select class="form-select" id="businessType" name="業種" required="" style="">
+            <option value="">選択してください</option>
+            <option value="小売・販売">小売・販売</option>
+            <option value="飲食・カフェ">飲食・カフェ</option>
+            <option value="美容・サロン">美容・サロン</option>
+            <option value="医療・福祉">医療・福祉</option>
+            <option value="建設・工務店">建設・工務店</option>
+            <option value="コンサルティング">コンサルティング</option>
+            <option value="教育・スクール">教育・スクール</option>
+            <option value="その他">その他</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="ウェブサイトの目的">ウェブサイトの目的<span class="required">必須</span></label>
+          <select class="form-select" id="purpose" name="ウェブサイトの目的" required="" style="">
+            <option value="">選択してください</option>
+            <option value="新規作成（初めて）">新規作成（初めて）</option>
+            <option value="リニューアル（作り直し）">リニューアル（作り直し）</option>
+            <option value="ランディングページ制作">ランディングページ制作</option>
+            <option value="その他">その他</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">希望するページ数</label>
+          <select class="form-select" id="pageCount" name="希望するページ数">
+            <option value="">選択してください</option>
+            <option value="1〜3ページ">1〜3ページ</option>
+            <option value="4〜6ページ">4〜6ページ</option>
+            <option value="7〜10ページ">7〜10ページ</option>
+            <option value="10ページ以上">10ページ以上</option>
+            <option value="まだ決まっていない">まだ決まっていない</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">希望する機能（複数選択可）</label>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="希望する機能（複数選択可）" value="お問い合わせフォーム"> お問い合わせフォーム
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="希望する機能（複数選択可）" value=" SNSリンク設置（Instagram・Xなど）"> SNSリンク設置（Instagram・Xなど）
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="希望する機能（複数選択可）" value="SEO基本対策"> SEO基本対策
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="希望する機能（複数選択可）" value="スマートフォン対応（レスポンシブ）"> スマートフォン対応（レスポンシブ）
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="希望する機能（複数選択可）" value="Googleマップ埋め込み"> Googleマップ埋め込み
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="希望する機能（複数選択可）" value="ブログ・お知らせ機能"> ブログ・お知らせ機能
+            </label>
+ <label class="checkbox-label">
+              <input type="checkbox" name="希望する機能（複数選択可）" value="ドメイン・サーバー取得代行"> ドメイン・サーバー取得代行
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="希望する機能（複数選択可）" value=" ウェブサイト公開"> ウェブサイト公開
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="希望する機能（複数選択可）" value="3ヶ月の運用サポート"> 3ヶ月の運用サポート
+            </label>            
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="budget">ご予算</label>
+          <select class="form-select" id="budget" name="ご予算">
+            <option value="">選択してください</option>
+            <option value="¥250,000〜（プレミアム最低）">¥250,000〜（プレミアム最低）</option>
+            <option value="¥200,000前後">¥300,000前後</option>
+            <option value="¥300,000前後">¥400,000前後</option>
+            <option value="柔軟に相談したい">柔軟に相談したい</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="deadline">希望納期</label>
+          <select class="form-select" id="deadline" name="希望納期">
+            <option value="">選択してください</option>
+            <option value="1ヶ月以内">1ヶ月以内</option>
+            <option value="2ヶ月以内">2ヶ月以内</option>
+            <option value="3ヶ月以内">3ヶ月以内</option>
+            <option value="特に決まっていない">特に決まっていない</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="message">ご要望・ご質問</label>
+          <textarea class="form-textarea" id="message" name="ご要望・ご質問" placeholder="参考にしたいウェブサイトのURL、デザインのイメージ、その他ご要望などをご記入ください。"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="referral">このサービスを知ったきっかけ</label>
+          <select class="form-select" id="referral" name="このサービスを知ったきっかけ">
+            <option value="">選択してください</option>
+            <option value="検索エンジン（Google等）">検索エンジン（Google等）</option>
+            <option value="SNS（Instagram・X等）">SNS（Instagram・X等）</option>
+            <option value="知人・紹介">知人・紹介</option>
+            <option value="その他">その他</option>
+          </select>
+        </div>
+
+        <hr class="form-divider">
+
+        <!-- 同意 -->
+        <div class="agree-box">
+          <p>お申し込みいただいた情報は、サービス提供・お問い合わせへの回答のみに使用します。第三者への提供は行いません。詳しくは<a href="https://8080-ih7s0zw8n5qwjdgi928qs-b8b4d66a.sg1.manus.computer/#">プライバシーポリシー</a>をご確認ください。</p>
+          <label class="agree-label">
+            <input type="checkbox" id="agree" name="同意" required="">
+            プライバシーポリシーに同意する
+          </label>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"></path></svg>申し込みを送信する</button>
+
+        <p class="submit-note">
+          <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          SSL暗号化通信で安全に送信されます
+        </p>
+
+      </form>
+    </section>
+
+    <!-- PLAN CARD (sidebar) -->
+    <aside class="plan-card">
+      <div class="plan-card-header">
+        <h3 class="plan-card-title">プレミアムプラン</h3>
+        <p class="plan-card-subtitle">制作 + 公開・運用サポート</p>
+      </div>
+
+      <div class="plan-price">
+        <p class="plan-price-label">料金（税別）</p>
+        <p class="plan-price-amount">¥250,000 <span>〜</span></p>
+      </div>
+
+      <ul class="plan-features">
+        <li>
+          <span class="check-icon">
+            <svg viewBox="0 0 24 24" stroke-width="3"><path d="M20 6L9 17l-5-5"></path></svg>
+          </span>
+          スタンダード全て
+        </li>
+        <li>
+          <span class="check-icon">
+            <svg viewBox="0 0 24 24" stroke-width="3"><path d="M20 6L9 17l-5-5"></path></svg>
+          </span>
+          ドメイン・サーバー取得代行
+        </li>
+        <li>
+          <span class="check-icon">
+            <svg viewBox="0 0 24 24" stroke-width="3"><path d="M20 6L9 17l-5-5"></path></svg>
+          </span>
+          ウェブサイト公開
+        </li>
+        <li>
+          <span class="check-icon">
+            <svg viewBox="0 0 24 24" stroke-width="3"><path d="M20 6L9 17l-5-5"></path></svg>
+          </span>
+          3ヶ月の運用サポート
+        </li>
+      </ul>
+
+      <p class="plan-note">
+        ※ 料金はウェブサイトの規模・ページ数によって変動します。詳細はお申し込み後の無料相談にてご確認ください。
+      </p>
+    </aside>
+
+  </div>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <h2 class="faq-title">よくあるご質問</h2>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          申し込み後の流れを教えてください
+          <svg viewBox="0 0 24 24" stroke-width="2"><path d="M6 9l6 6 6-6"></path></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            フォーム送信後、2営業日以内に担当者よりメールまたはお電話にてご連絡いたします。その後、無料ヒアリングを経て、お見積もりと制作スケジュールをご提案いたします。
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          制作期間はどのくらいかかりますか？
+          <svg viewBox="0 0 24 24" stroke-width="2"><path d="M6 9l6 6 6-6"></path></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            標準的なウェブサイト（5〜8ページ）の場合、ヒアリング〜納品まで約4〜6週間が目安です。ページ数や機能によって変動しますので、詳細はご相談ください。
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          ドメインやサーバーの準備は必要ですか？
+          <svg viewBox="0 0 24 24" stroke-width="2"><path d="M6 9l6 6 6-6"></path></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            スタンダードプランでは、ドメイン・サーバーの取得はお客様にてご対応いただく必要があります。取得方法についてはサポートいたします。ドメイン・サーバーの取得代行を希望される場合は、プレミアムプランをご検討ください。
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          申し込み後にキャンセルはできますか？
+          <svg viewBox="0 0 24 24" stroke-width="2"><path d="M6 9l6 6 6-6"></path></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            フォーム送信後の無料ヒアリング前であれば、キャンセルは可能です。制作開始後のキャンセルについては、進捗状況に応じてキャンセル料が発生する場合があります。詳細はご契約前にご確認ください。
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          分割払いは対応していますか？
+          <svg viewBox="0 0 24 24" stroke-width="2"><path d="M6 9l6 6 6-6"></path></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            はい、分割払いにも対応しております。一般的には着手金50%・納品時50%の2回払いが標準ですが、ご要望に応じて柔軟に対応いたします。詳細はヒアリング時にご相談ください。
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 ウェブ制作サービス. All rights reserved.</p>
+    <p style="margin-top:6px;">中小企業のビジネスをネットで輝かせるお手伝いをします。</p>
+  </footer>
+
+  <!-- SUCCESS OVERLAY -->
+  <div class="success-overlay" id="successOverlay">
+    <div class="success-card">
+      <div class="success-icon">
+        <svg viewBox="0 0 24 24" stroke-width="2.5"><path d="M20 6L9 17l-5-5"></path></svg>
+      </div>
+      <h2>お申し込みありがとうございます！</h2>
+      <p>ご入力いただいた内容を受け付けました。<br>2営業日以内に担当者よりご連絡いたします。<br>しばらくお待ちください。</p>
+      <a href="https://8080-ih7s0zw8n5qwjdgi928qs-b8b4d66a.sg1.manus.computer/#" class="success-back-btn" onclick="closeSuccess()">トップページに戻る</a>
+    </div>
+  </div>
+
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    // Form submit
+    const form = document.getElementById('applyForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Basic validation
+      const required = form.querySelectorAll('[required]');
+      let valid = true;
+      required.forEach(el => {
+        el.style.borderColor = '';
+        if (!el.value.trim() || (el.type === 'checkbox' && !el.checked)) {
+          el.style.borderColor = '#EF4444';
+          valid = false;
+        }
+      });
+
+      if (!valid) {
+        const firstError = form.querySelector('[required][style*="EF4444"]');
+        if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+
+      const submitBtn = document.getElementById('submitBtn');
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '送信中...';
+
+      try {
+        const formData = new FormData(form);
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          // Show success
+          document.getElementById('successOverlay').classList.add('show');
+          document.body.style.overflow = 'hidden';
+          form.reset();
+        } else {
+          alert('送信に失敗しました。時間をおいて再度お試しください。');
+        }
+      } catch (error) {
+        alert('エラーが発生しました。ネットワーク接続を確認してください。');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<svg viewBox="0 0 24 24" stroke-width="2"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>申し込みを送信する';
+      }
+    });
+
+    // Reset border on input
+    form.querySelectorAll('[required]').forEach(el => {
+      el.addEventListener('input', () => { el.style.borderColor = ''; });
+      el.addEventListener('change', () => { el.style.borderColor = ''; });
+    });
+
+    function closeSuccess() {
+      document.getElementById('successOverlay').classList.remove('show');
+      document.body.style.overflow = '';
+      form.reset();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
+
+</body></html>
